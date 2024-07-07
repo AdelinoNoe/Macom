@@ -1,0 +1,82 @@
+.principal{
+    width: 100vw;  
+    background-image:url("../imagem/testeBack.png");
+}
+
+.slide_show{
+    background-image: url("../imagem/teste.jpeg");
+    height:20px;
+    background-repeat: no-repeat;
+    background-size:100vw 350px;
+   animation: animate 20s infinite;
+}
+.teste{
+    width: 100vw;
+    height: 50vh;
+}
+
+@keyframes animate{
+    20%{
+        background-image: url("../imagem/macom 2.jpeg");
+        background-size:100vw 350px;
+    }
+    40%{
+        background-image: url("../imagem/macom 4.jpeg");
+        background-size:100vw 350px;
+    }
+    60%{
+        background-image: url("../imagem/macom 4.jpeg");
+        background-size:100vw 350px;
+    }
+    80%{
+        background-image: url("../imagem/macom 5.jpeg");
+        background-size:100vw 320px;
+    }
+    100%{
+        background-image: url("../imagem/macom 6.jpeg");
+        background-size:100vw 350px;
+    }
+}
+/* mexendo na classe flex flex 1 e flex 2*/
+
+.flex{
+    display: flex;
+    padding:2vw;
+}
+.flex1{
+    width: 45vw;
+    height: 40vh;
+    margin-left:1vw;
+    box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.9);
+}
+.flex1 .flex2, p{
+    font-size:12.5pt;
+    text-align: center;
+}
+.flex1 .flex2, h1{
+    color: #FF8C00;
+}
+.flex2{
+    width: 45vw;
+    height: 40vh;
+    margin-left:3vw;
+    box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.9);
+}
+p{
+    color:#FF8C00;
+}
+/* Ajustando as icons das divs **/
+.flex1 .flex2,img{
+    width: 70px;
+    height:70px;
+    margin-left:170px;
+}
+.IconTitulo{
+    display: flex;
+    height: 70px;
+}
+.IconTitulo h1{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+

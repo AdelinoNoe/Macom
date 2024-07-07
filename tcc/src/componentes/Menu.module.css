@@ -1,0 +1,36 @@
+.menu{
+    margin-top: 0;
+    justify-content: space-between;
+    display: flex;
+    height:17vh; 
+    background-image: url("../imagem/fundo.png");
+    background-size: 100vw 17vh;
+    background-repeat: no-repeat;
+}
+.opacidade{
+    background: rgba(0,0,0,0.4);
+    width: 100vw;
+    display: flex;
+}
+.menu_ul{
+   display: flex;
+   padding: 2em;
+   list-style: none;
+   margin-top: 0; 
+   margin-left: 20vw;
+}
+
+.menu_li{
+    text-decoration:none;
+    margin: 1em;
+}
+.menu_li a{
+    text-decoration:none;
+    cursor: pointer;
+    font-size: 13pt;
+    color:#FF8C00;
+}
+.menu_li a:hover{
+  color:#ffff;
+}
+
