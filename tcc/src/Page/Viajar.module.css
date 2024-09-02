@@ -1,0 +1,69 @@
+.principal{
+    width: 80vw;
+    background-color: aqua;
+    margin-left: 10vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.selecao,.selecao1,.lista1,.lista2,.lista3,.lista4,.lista5,.lista6,.lista7,.lista8,.lista9{
+    margin-left:20vw;
+}
+.selecao .selecao1 .lista1 .lista2 .lista3 .lista4 .lista5 .lista6 .lista7 .lista8 .lista9, select,input,label{
+    width: 400px;
+    height: 30px;
+    border-radius: 20px 20px;
+    border-color: aqua;  
+}
+.lista1 .lista2 .lista3 .lista4 .lista5 .lista6 .lista7 .lista8 .lista9,input{
+    margin-top: 20px;
+}
+.selecao select{
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.selecao1 select{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.lista1 input{
+    margin-left: 130px;
+}
+.lista2 input{
+    margin-left: 140px;
+}
+.lista3 input{
+    margin-left: 140px;
+}
+.lista4 input{
+    margin-left: 115px;
+}
+.lista5 input{
+    margin-left: 100px;
+}
+.lista6 input{
+    margin-left: 113px;
+}
+.lista7 input{
+    margin-left: 126px;
+}
+.lista8 input{
+    margin-left: 150px;
+}
+.lista9 input{
+    margin-left: 110px;
+}
+.btn{
+    width: 150px;
+    height: 36px;
+    border-radius: 15px 15px;
+    border-color: aqua;
+    margin-top:40px;
+    margin-bottom: 30px;
+    margin-left: 35vw;
+}
+
+
+
+
+
+

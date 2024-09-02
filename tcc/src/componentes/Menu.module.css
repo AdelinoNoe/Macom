@@ -28,9 +28,9 @@
     text-decoration:none;
     cursor: pointer;
     font-size: 13pt;
-    color:#FF8C00;
+    color:#ffff ;
 }
 .menu_li a:hover{
-  color:#ffff;
+  color:#FF8C00;
 }
 

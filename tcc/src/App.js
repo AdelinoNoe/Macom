@@ -9,6 +9,9 @@ import Mercadoria from './Page/Mercadoria'
 import Recuperar from './Page/Recuperar'
 import Rodape from './componentes/footer'
 import secao from './layout/Conteiner.module.css'
+import Edit from './Page/Edit'
+import Viajar from './Page/Viajar'
+import AgendarViagem from './Page/AgendarViajem'
 
 
 function App() {
@@ -19,9 +22,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>} />
         <Route path="/Viagem" element={<Viagem></Viagem>} />
-        <Route path="/Agencia" element={<Agencia></Agencia>} />
+        <Route path="/Agencia" element={<AgendarViagem></AgendarViagem>} />
         <Route path="/Mercadoria" element={<Mercadoria></Mercadoria>} />
         <Route path="/Recuerar" element={<Recuperar></Recuperar>} />
+        <Route path="/Edit/:id" element={<Edit></Edit>} />
+        <Route path="/Viajar/:id" element={<Viajar></Viajar>} />
       </Routes>
       </section>
       <Rodape/>

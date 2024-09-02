@@ -1,17 +1,34 @@
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-function Viagem() {
+function Edit() {
+    const{id}=useParams();
     const[formValue,setFormValue]=useState({provincia:'', municipio:'', nome:''});
     const handleInput=(e)=> {
         setFormValue({... formValue, [e.target.name]: e.target.value } )
     }
+
+    useEffect(()=>{
+        const userRowData=async()=>{
+            const  getuserdata=await fetch("http://localhost:80/api/connection.php/"+id);
+            const resuserdata=await getuserdata.json();
+            console.log(resuserdata);
+            setFormValue(resuserdata);
+        }
+        userRowData();
+}, []);
+
     const handleSubmit=async(e)=>{
             e.preventDefault();
-           const formData={provincia:formValue.provincia,municipio:formValue.municipio,nome:formValue.nome};
-           const rest= await axios.post("http://localhost:80/api/connection.php", formData)
+           const formData={id:id,provincia:formValue.provincia,municipio:formValue.municipio,nome:formValue.nome};
+           const rest= await axios.put("http://localhost:80/api/connection.php", formData);
+           if(rest){
+
+           }
     }
+
     return (
         <div >
 
@@ -48,4 +65,4 @@ function Viagem() {
 
 }
 
-export default Viagem
+export default Edit

@@ -1,6 +1,6 @@
 .principal{
     width: 100vw;  
-    background-image:url("../imagem/testeBack.png");
+   /* background-image:url("../imagem/testeBack.png");*/
 }
 
 .slide_show{
@@ -63,7 +63,7 @@
     box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.9);
 }
 p{
-    color:#FF8C00;
+    color:#000;
 }
 /* Ajustando as icons das divs **/
 .flex1 .flex2,img{
