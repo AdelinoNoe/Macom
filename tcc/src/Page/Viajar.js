@@ -4,7 +4,8 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Style from './Viajar.module.css'
 
-function Viajar() {
+function Viajar()
+ {
     const{id}=useParams();
     const[formValue,setFormValue]=useState({provinciaOrigem:'',provinciaDestino:'', preco:'', data:'',hora:'',
          agencia:'', autocarro:'', lugar:'',nome:'',bi:'',telefone:''});
@@ -12,15 +13,17 @@ function Viajar() {
         setFormValue({... formValue, [e.target.name]: e.target.value } )
     }
 
-    useEffect(()=>{
-        const userRowData=async()=>{
-            const  getuserdata=await fetch("http://localhost:80/api/connection.php/"+id);
-            const resuserdata=await getuserdata.json();
-            console.log(resuserdata);
-            setFormValue(resuserdata);
-        }
-        userRowData();
-}, []);
+    useEffect(()=>
+        {
+            const userRowData=async()=>
+            {
+                 const  getuserdata=await fetch("http://localhost:80/api/connection.php/"+id);
+                 const resuserdata=await getuserdata.json();
+                 console.log(resuserdata);
+                 setFormValue(resuserdata);
+            }
+            userRowData();
+        } , []);
 
     const handleSubmit=async(e)=>{
             e.preventDefault();
@@ -36,7 +39,9 @@ function Viajar() {
         <div className={Style.principal}>
 
             <form onSubmit={handleSubmit}>
+                  <h2> Marcar Viagem</h2>
                    <div className={Style.selecao}>
+
                     <label >Província Origem:</label>
     
                     <select id="provinciaO" name="provinciaOrigem"   value={formValue.provinciaOrigem} onChange={handleInput}>

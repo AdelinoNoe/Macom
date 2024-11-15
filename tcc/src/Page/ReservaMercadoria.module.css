@@ -2,6 +2,7 @@
     width: 95vw;
     
 }
+
 .pesquisa{
     width:40vw;
     height: 4vh;
@@ -22,14 +23,14 @@
     border-radius: 10px;
     border-color: #1E90FF;
     background-color:#fff;
-
 }
 .tabela {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 1em;
     width: 70vw;
-    margin-left:4vw;
+    margin-left:10vw;
+    margin-bottom:27vh;
 }
 .tabela thead tr th{
     background-color:#FF8C00;
@@ -46,15 +47,3 @@
 .tabela tbody tr:nth-last-of-type(even){
     background-color: #f3f3f3;
 }
-.foto{
-    width: 130px;
-    height: 80px;
-}
-thead tr th{
-    font-size:11pt;
-}
-tbody tr td{
-    font-size: 10pt;
-}
-
-

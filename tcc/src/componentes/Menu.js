@@ -13,7 +13,7 @@ function Menu() {
                     <li className={style.menu_li}><Link to="/Viagem">Viagens Disponíveis</Link></li>
                     <li className={style.menu_li}><Link to="/Agencia">Agencias</Link></li>
                     <li className={style.menu_li}><Link to="/Mercadoria">Envio de Mercadoria</Link></li>
-                    <li className={style.menu_li}><Link to="/Recuerar">Recuperação de passagem</Link></li>
+                    <li className={style.menu_li}><Link to="/Recuerar">Minhas Viagens</Link></li>
             </ul>
             </div>
         </nav>

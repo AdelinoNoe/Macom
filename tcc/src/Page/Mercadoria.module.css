@@ -1,0 +1,50 @@
+.mercadoria{
+    background-color: #ffff;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 80vw;
+    margin-left: 15vw;
+}
+.tabela {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    width: 70vw;
+    margin-bottom:20vh;
+    margin-top:10vh;
+}
+
+.tabela thead tr th{
+    background-color:#FF8C00;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+.tabela th, .tabela td{
+    padding: 12px 10px;
+}
+.tabela tbody tr{
+    border-bottom: 1px solid #FF8C00 ;
+}
+.tabela tbody tr:nth-last-of-type(even){
+    background-color: #f3f3f3;
+}
+.paragrafo{
+    margin-left: 25vw;
+    font-size:15pt;
+    color:#FF8C00 ;
+   margin-top: 10vh;
+}
+.botao{
+    width: 120px;
+    height: 50px;
+    margin-top: 3vh;
+    margin-left: 20px;
+    border-radius: 10px;
+    border-color:#FF8C00;
+    background-color:#fff;
+    float: right;
+    margin-top: -20px;
+
+}
+

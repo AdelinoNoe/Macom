@@ -1,13 +1,14 @@
 import  {useState,useEffect} from 'react'
  import { Link } from 'react-router-dom';
- import axios from 'axios';
+ import style from './Mercadoria.module.css'
+
 
 function Mercadoria()
 {
     const [userData,setUseData]= useState([]);
     useEffect(()=>{
         const getUserData=async()=>{
-            const reqData=await fetch("http://localhost:80/api/connection.php");
+            const reqData=await fetch("http://localhost:80/api/mercadoria.php");
             const resData=await reqData.json();
             console.log(reqData);
             setUseData(resData);
@@ -15,18 +16,24 @@ function Mercadoria()
         getUserData();
     },[]);
 
-    const handleDelete= async(id)=>{
-        const res= axios.delete("http://localhost:80/api/connection.php/"+id);
-    }
     return(
-        <div>
-            <table>
+        <div className={style.mercadoria}>
+           
+            
+            <Link to={"/ReservaMercadoria/"}>
+            <button className={style.botao}>Minhas Reservas</button>
+            </Link>
+            <p className={style.paragrafo}>Transporte de Cargas Disponíveis</p>
+            <table className={style.tabela}> 
                 <thead>
                     <tr>
-                        <th>Provincia</th>
-                        <th>Municipio</th>
-                        <th>Nome</th>
-                        <th>id</th>
+                        <th>Provincia Origem</th>
+                        <th>Provincia Destino</th>
+                        <th>Agencia</th>
+                        <th>Transporte</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Marcar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,13 +41,14 @@ function Mercadoria()
                         userData.map((dados,index)=>(
 
                             <tr key={index}>
-                                <td>{dados.provincia}</td>
-                                <td>{dados.municipio}</td>
-                                <td>{dados.nome}</td>
-                                <td>{dados.id}</td>
-                                <td> <button onClick={()=>handleDelete(dados.id)}>Apagar</button></td>
+                                <td>{dados.provinciaOrigem}</td>
+                                <td>{dados.provinciaDestino}</td>
+                                <td>{dados.agencia}</td>
+                                <td>{dados.transporte}</td>
+                                <td>{dados.data}</td>
+                                <td>{dados.hora}</td>
                                 <td>
-                                    <Link to={"/Edit/"+dados.id}>Edição</Link>
+                                    <Link to={"/EnvioMercadoria/"+dados.id}>Marcar Viagem</Link>
 
                                 </td>
 

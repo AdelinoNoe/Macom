@@ -11,6 +11,7 @@ function Viagem() {
             e.preventDefault();
            const formData={provincia:formValue.provincia,municipio:formValue.municipio,nome:formValue.nome};
            const rest= await axios.post("http://localhost:80/api/connection.php", formData)
+           console.log(rest);
     }
     return (
         <div >

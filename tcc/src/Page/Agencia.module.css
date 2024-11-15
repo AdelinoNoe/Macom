@@ -1,0 +1,52 @@
+.principal{
+    width: 100vw;
+}
+.norte{
+    display: flex;
+    width: 100vw;
+}
+.mix{
+    display: flex;
+    width: 100vw;
+    margin-bottom:70px;
+}
+.Gamek,.Golf2,.Benguela,.Huambo{
+    width: 48vw;
+    margin-top: 50px;
+}
+.Golf2,.Huambo{
+    border: 3px solid #FF8C00;
+    margin-left:10px;
+}
+.Gamek, .Benguela{
+    margin-left:1vw;
+    border: 3px solid #FF8C00;
+}
+.paragrafo{
+    font-size: 20px;
+    text-align: center;
+}
+
+/* formulário*/
+.tabela {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    width:48vw;
+}
+
+.tabela thead tr th{
+    background-color:#FF8C00;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+ .tabela td{
+    padding: 5px 5px;
+}
+.tabela tbody tr{
+    border-bottom: 1px solid #FF8C00 ;
+}
+.tabela tbody tr:nth-last-of-type(even){
+    background-color: #f3f3f3;
+}

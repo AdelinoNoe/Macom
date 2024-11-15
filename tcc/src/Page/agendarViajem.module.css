@@ -13,7 +13,7 @@
 }
 
 .tabela thead tr th{
-    background-color:aqua;
+    background-color:#FF8C00;
     color: black;
     font-weight: bold;
     text-align: left;
@@ -22,7 +22,7 @@
     padding: 12px 10px;
 }
 .tabela tbody tr{
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #FF8C00 ;
 }
 .tabela tbody tr:nth-last-of-type(even){
     background-color: #f3f3f3;
@@ -32,3 +32,29 @@ h3{
     margin-left:30vw;
     color:#FF8C00 ;
 }
+.procurar{
+    width: 100vw;
+    height: 20vh;
+    border: 2px 2px solid #FF8C00;
+    margin-left:-15vw;
+}
+.iptn,.ipt1{
+    width: 15vw;
+    margin-left:20px;
+    margin-top: 5.5vh;
+}
+.ipt{
+    margin-left:5vw;
+    width:15vw;
+    margin-left:20px;
+}
+.botao{
+    width: 100px;
+    height:30px;
+    border-radius: 10px;
+    border-color: aqua;
+    background-color:#fff;
+    margin-left:3vw;
+
+}
+ 

@@ -44,39 +44,82 @@
     padding:2vw;
 }
 .flex1{
-    width: 45vw;
-    height: 40vh;
-    margin-left:1vw;
+    width:28vw;
+    height: 55vh;
+    margin-left:2vw;
     box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.9);
 }
-.flex1 .flex2, p{
-    font-size:12.5pt;
-    text-align: center;
-}
-.flex1 .flex2, h1{
-    color: #FF8C00;
-}
+
 .flex2{
-    width: 45vw;
-    height: 40vh;
-    margin-left:3vw;
+    width:28vw;
+    height: 55vh;
+    margin-left:4vw;
     box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.9);
 }
-p{
-    color:#000;
+.flex3{
+    width:28vw;
+    height: 55vh;
+    margin-left:4vw;
+    box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.9);
 }
-/* Ajustando as icons das divs **/
-.flex1 .flex2,img{
-    width: 70px;
-    height:70px;
-    margin-left:170px;
-}
+
 .IconTitulo{
-    display: flex;
-    height: 70px;
+    width:28vw;
+    height:200px;
 }
-.IconTitulo h1{
-    margin-left: 20px;
-    margin-top: 30px;
+
+.corpo{
+   width: 28vw;
+   height:185px;
+   background-color:#FF8C00;
+   position: relative;
+   margin-top:-3px;
+}
+
+.flex1 .flex2 .flex3, img{
+    width:27.555vw;
+    height:28vh;
+    border-style: inset;
+    border-color: #FF8C00;
+}
+.paragrafo{
+    font-size:15pt;
+    text-align: center;
+    color: #fff;
+}
+
+.viagem{
+    width: 100vw;
+    height: 65vh;
+    margin-bottom: 22px;
+}
+
+.tabela {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    width: 70vw;
+    margin-left: 15vw;
+}
+
+.tabela thead tr th{
+    background-color:#FF8C00;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+.tabela th, .tabela td{
+    padding: 12px 10px;
+}
+.tabela tbody tr{
+    border-bottom: 1px solid #FF8C00;
+}
+.tabela tbody tr:nth-last-of-type(even){
+    background-color: #f3f3f3;
+}
+.paragrafoViagem{
+    color:#FF8C00 ;
+    font-size:18pt;
+    text-align: center;
 }
 
