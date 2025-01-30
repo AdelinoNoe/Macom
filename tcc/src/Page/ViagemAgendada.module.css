@@ -1,15 +1,14 @@
-.viajar{
-    background-color: #ffff;
-    margin-top: 40px;
-    width: 80vw;
-    margin-left: 15vw;
-    margin-bottom: 21.3vh;
+.principal{
+    width: 100vw;
 }
 .tabela {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 1em;
     width: 70vw;
+    margin-bottom:20vh;
+    margin-top:5vh;
+    margin-left: 10vw;
 }
 
 .tabela thead tr th{
@@ -27,7 +26,6 @@
 .tabela tbody tr:nth-last-of-type(even){
     background-color: #f3f3f3;
 }
-
 h3{
     margin-left:30vw;
     color:#FF8C00 ;
@@ -36,12 +34,13 @@ h3{
     width:65vw;
     height:10vh;
     border: 2px 2px solid #FF8C00;
-    margin-left:3.5vw;
+    margin-top: 8vh;
+    margin-left: 14vw;
 }
 .iptn,.ipt1{
     width: 15vw;
     margin-left:20px;
-    margin-top:0vh;
+    margin-top:2vh;
 }
 .ipt{
     margin-left:5vw;
@@ -55,18 +54,6 @@ h3{
     border-color: aqua;
     background-color:#fff;
     margin-left:3vw;
-
-}
-.btn{
-    width: 120px;
-    height: 50px;
-    margin-top: 500vh;
-    margin-left: 20px;
-    border-radius: 10px;
-    border-color:#FF8C00;
-    background-color:#fff;
-    float: right;
-    margin-top: -20px;
 
 }
  

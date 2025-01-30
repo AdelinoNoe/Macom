@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 
 
 
-function Recuerar()
+function Voyage()
 {
     
     const[bi,setBi]= useState([]);
     const handleInput=(e)=> {
-        setBi({... bi, [e.target.name]: e.target.value } )
+        setBi({... setBi, [e.target.name]: e.target.value } )
     }
 
     
@@ -24,17 +24,24 @@ function Recuerar()
     const handleSubmit=async(e)=>{
             if(e){
             e.preventDefault();
-            const formData={bi:bi.bi}
+
+            const formData={origem:bi.origem,destino:bi.destino,data:bi.data};
             const reqData=await axios.post("http://localhost:80/api/pesquisa.php",formData);
-            setBi(reqData.data);   
-        }       
+            setBi(reqData.data);
+        }
+       
+        
 }
+    
+       
            
     return(
       <div className={Style.Recuperar} >
 
       <form onSubmit={handleSubmit} > 
         <div className={Style.pesquisar}>
+        <input type="text" placeholder="Digite o seu número do BI" value={bi.bi} onChange={handleInput} className={Style.pesquisa}  name="bi"></input>
+        <input type="text" placeholder="Digite o seu número do BI" value={bi.bi} onChange={handleInput} className={Style.pesquisa}  name="bi"></input>
         <input type="text" placeholder="Digite o seu número do BI" value={bi.bi} onChange={handleInput} className={Style.pesquisa}  name="bi"></input>
         <button className={Style.botao}>Pesquisar</button>
         </div>
@@ -95,4 +102,4 @@ function Recuerar()
 
 }
 
-export default Recuerar;
+export default Voyage;

@@ -3,9 +3,12 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Style from './EnvioMercadoria.module.css'
+import { useNavigate } from 'react-router-dom';
 
 function EnvioMercadoria() {
     const{id}=useParams();
+    const[mensagem,setMensagem]=useState('');
+    const navegar=useNavigate();
     const[formValue,setFormValue]=useState({provinciaOrigem:'',provinciaDestino:'', agencia:'', transporte:'',data:'',
          hora:'',nome:'',bi:'',telefone:'',nomeDestino:'',telefoneDestino:''});
     const handleInput=(e)=> {
@@ -27,14 +30,24 @@ function EnvioMercadoria() {
            const formData={id:id,provinciaOrigem:formValue.provinciaOrigem,provinciaDestino:formValue.provinciaDestino,agencia:formValue.agencia,transporte:formValue.transporte,
            data:formValue.data,hora:formValue.hora,nome:formValue.nome,bi:formValue.bi,telefone:formValue.telefone,nomeDestino:formValue.nomeDestino,telefoneDestino:formValue.telefoneDestino,peso:formValue.peso, preco:formValue.preco};
            const rest= await axios.post("http://localhost:80/api/mercadoria.php", formData);
-           if(rest){
-
-           }
+           if(rest)
+            {
+                setMensagem('Reserva Efetuada com sucesso');
+                setTimeout(()=>{
+                navegar('/ReservaMercadoria');
+                },2000);
+            }
+            else{
+                alert( "Reserva não efetuada, verifique os dados ou se jça excedeu o limite de cargas");
+                setTimeout(()=>{
+                navegar('/ReservaMercadoria');
+                },3000)
+            }
     }
 
     return (
         <div className={Style.principal}>
-            
+            <h2>{mensagem}</h2>
             <form onSubmit={handleSubmit}>
                   <h2>Fazer Reserva</h2>
 

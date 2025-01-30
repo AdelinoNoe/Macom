@@ -14,6 +14,8 @@ import AgendarViagem from './Page/AgendarViajem'
 import EnvioMercadoria from './EnvioMercadoria';
 import Addfoto from './Addfoto';
 import ReservaMercadoria from './Page/ReservaMercadoria';
+import ViagemAgendada from './Page/ViagemAgendada';
+import Voyage from './Page/Voyage';
 
 
 
@@ -35,6 +37,8 @@ function App() {
         <Route path="/EnvioMercadoria/:id" element={<EnvioMercadoria></EnvioMercadoria>} />
         <Route path="/Addfoto/:id" element={<Addfoto></Addfoto>}/>
         <Route path="/ReservaMercadoria" element={<ReservaMercadoria></ReservaMercadoria>}/>
+        <Route path="/ViagemAgendada" element={<ViagemAgendada></ViagemAgendada>}/>
+        <Route path="/Voyage" element={<Voyage></Voyage>}/>
       </Routes>
       </section>
       <Rodape/>

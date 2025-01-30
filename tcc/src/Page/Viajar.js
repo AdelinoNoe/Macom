@@ -2,11 +2,14 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import Style from './Viajar.module.css'
+import Style from './Viajar.module.css';
+import { useNavigate } from 'react-router-dom';
 
 function Viajar()
  {
     const{id}=useParams();
+    const[mensagem,setMensagem]=useState('');
+    const navegar=useNavigate();
     const[formValue,setFormValue]=useState({provinciaOrigem:'',provinciaDestino:'', preco:'', data:'',hora:'',
          agencia:'', autocarro:'', lugar:'',nome:'',bi:'',telefone:''});
     const handleInput=(e)=> {
@@ -30,14 +33,27 @@ function Viajar()
            const formData={id:id,provinciaOrigem:formValue.provinciaOrigem,provinciaDestino:formValue.provinciaDestino,preco:formValue.preco,data:formValue.data,
            hora:formValue.hora,agencia:formValue.agencia,autocarro:formValue.autocarro,lugar:formValue.lugar,nome:formValue.nome,bi:formValue.bi,telefone:formValue.telefone};
            const rest= await axios.post("http://localhost:80/api/connection.php", formData);
-           if(rest){
-
-           }
+          
+           if(rest)
+            {
+                setMensagem('Viagem marcada com sucesso')
+                setTimeout(()=>{
+                navegar('/Recuerar');
+                },3000);
+            }
+            else{
+                alert( "Registos não efetuado, por favor verifique os Dados");
+                setTimeout(()=>{
+                navegar('/Viagem');
+                },3000);
+            }
     }
 
     return (
         <div className={Style.principal}>
 
+          
+            <h2>{mensagem}</h2>
             <form onSubmit={handleSubmit}>
                   <h2> Marcar Viagem</h2>
                    <div className={Style.selecao}>

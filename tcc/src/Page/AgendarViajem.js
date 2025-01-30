@@ -1,57 +1,42 @@
-import  {useState,useEffect} from 'react'
- import { Link } from 'react-router-dom';
- import style from './agendarViajem.module.css'
- import axios from 'axios'
+import  {useState,useEffect} from 'react';
+ import { Link} from 'react-router-dom';
+ import style from './agendarViajem.module.css';
+ import axios from 'axios';
+ import { useNavigate } from 'react-router-dom';
 
 
 function AgendarViagem()
 {
+   
     const [userData,setUseData]= useState([]);
+    const navegar=useNavigate();
     const[formValue,setFormvalue]=useState({origem:'',destino:'',data:''});
 
     const handleInput=(e)=> {
-        setFormvalue({... setFormvalue, [e.target.name]: e.target.value } )
+        setFormvalue({... formValue, [e.target.name]: e.target.value } )
     }
 
-    /*useEffect(()=>{
+    useEffect(()=>{
         const getUserData=async()=>{
             const reqData=await fetch("http://localhost:80/api/connection.php");
             const resData=await reqData.json();
-            console.log(reqData);
             setUseData(resData);
         }
         getUserData();
-    },[]);*/
+    
+    },[]);
 
-    const handleSubmit=async(e)=>{
-     
-            e.preventDefault();
-        
-           const formData={origem:formValue.origem,destino:formValue.destino,data:formValue.data};
-           const rest= await axios.post("http://localhost:80/api/agendarViagem.php",formData);
-           setFormvalue(rest);
-           console.log(rest);
-    }
-
+   
 
     return(
+
         <div className={style.viajar}> 
 
+           <Link to={"/ViagemAgendada/"}>
+            <button className={style.btn}>Pesquisar viagem por data</button>
+            </Link>
+
         <h3>Viagens Disponíveis</h3>
-
-            <div className={style.procurar}>
-
-            <form onSubmit={handleSubmit}>
-
-                <input type="text" name="origem" className={style.iptn} value={formValue.origem} onChange={handleInput} placeholder="Digite a Província Origem"/>
-                <input type="text" name="destino" className={style.iptn} value={formValue.destino} onChange={handleInput} placeholder="Digite a Província Destino"/>
-                <input type="date" name="data" className={style.iptn} value={formValue.data} onChange={handleInput}/>
-
-                <button className={style.botao} type="submit"> Procurar</button>
-
-            </form>
-            </div>
-
 
             <table className={style.tabela}> 
                 <thead>
@@ -69,6 +54,7 @@ function AgendarViagem()
                 </thead>
                 <tbody>
                     {
+                    
                         userData.map((dados,index)=>(
 
                             <tr key={index}>

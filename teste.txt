@@ -1,0 +1,10 @@
+O cabeçalho de resposta Access-Control-Allow-Methods especifica os métodos HTTP permitidos para acessar 
+um recurso em resposta a uma preflight request:
+
+O cabeçalho de resposta Access-Control-Allow-Headers indica quais cabeçalhos HTTP podem ser usados
+ em uma requisição efetiva. Ele é usado em resposta a
+ uma preflight request que inclui o cabeçalho Access-Control-Request-Headers. 
+
+O cabeçalho Access-Control-Allow-Origin:* é um cabeçalho HTTP que indica que um recurso pode ser 
+acessado por qualquer origem. Ele é parte do protocolo Cross-Origin Resource Sharing (CORS) e é usado
+ para controlar o acesso entre origens em uma aplicação web.

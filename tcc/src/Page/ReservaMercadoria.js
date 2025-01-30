@@ -16,11 +16,12 @@ function ReservaMercadoria()
         if(e)
         {
              e.preventDefault();
+             const formData={bi:bi.bi}
+             const reqData=await axios.put("http://localhost:80/api/mercadoria.php",formData);
+             setBi(reqData.data);
          }
    
-         const formData={bi:bi.bi}
-         const reqData=await axios.put("http://localhost:80/api/mercadoria.php",formData);
-         setBi(reqData.data);
+        
     }
 
         useEffect(()=>
